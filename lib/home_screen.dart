@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Color.fromARGB(255, 240, 240, 240),
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        //  backgroundColor: Colors.deepOrange,
         title: Text('Himachal GK'),
       ),
       drawer: MainDrawer(),

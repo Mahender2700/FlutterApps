@@ -23,10 +23,11 @@ class HpGk extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   brightness: Brightness.light,
-      //   primaryColor: Color.fromARGB(255, 255, 120, 2),
-      // ),
+      theme: ThemeData(
+          primarySwatch: Colors.pink,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.deepOrange,
+          )),
       home: HomeScreen(),
       initialRoute: '/',
       routes: {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:himachal_gk/KnowYourState/currentAffairs/current_affairs_month_list.dart';
-import 'package:himachal_gk/KnowYourState/currentAffairs/current_affairs_text.dart';
 
 import '../../mcq/mcq_screen.dart';
 

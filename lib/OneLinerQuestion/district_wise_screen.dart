@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/chamba.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/hamirpur.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/kangra.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/kinaur.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/kullu.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/lahol_spiti.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/mandi.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/shimla.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/sirmour.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/solan.dart';
+import 'package:himachal_gk/OneLinerQuestion/Distt._Wise/unna.dart';
+import 'Distt._Wise/bilaspur.dart';
 import '../style.dart';
 
 class DisttWiseScreen extends StatelessWidget {
-//  static const routeName = '/sub-category-screen';
   @override
   Widget build(BuildContext context) {
     var category = [
@@ -39,40 +50,77 @@ class DisttWiseScreen extends StatelessWidget {
                   ),
                   onTapHandler: () {
                     if (index == 0) {
-                      Navigator.of(context).pushNamed('/BilaspurGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => BilaspurGK())),
+                      );
                     }
                     if (index == 1) {
-                      Navigator.of(context).pushNamed('/ChambaGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => KulluGK())),
+                      );
                     }
                     if (index == 2) {
-                      Navigator.of(context).pushNamed('/KangraGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => ChambaGK())),
+                      );
                     }
                     if (index == 3) {
-                      Navigator.of(context).pushNamed('/MandiGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => MandiGK())),
+                      );
                     }
                     if (index == 4) {
-                      Navigator.of(context).pushNamed('/ShimlaGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => HamirpurGK())),
+                      );
                     }
                     if (index == 5) {
-                      Navigator.of(context).pushNamed('/KinaurGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => KangraGK())),
+                      );
                     }
                     if (index == 6) {
-                      Navigator.of(context).pushNamed('/LaholSpitiGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => UnnaGK())),
+                      );
                     }
                     if (index == 7) {
-                      Navigator.of(context).pushNamed('/UnnaGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => LaholSpitiGK())),
+                      );
                     }
                     if (index == 8) {
-                      Navigator.of(context).pushNamed('/HamirpurGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => ShimlaGK())),
+                      );
                     }
                     if (index == 9) {
-                      Navigator.of(context).pushNamed('/SolanGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => SolanGK())),
+                      );
                     }
                     if (index == 10) {
-                      Navigator.of(context).pushNamed('/SirmourGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => KinaurGK())),
+                      );
                     }
                     if (index == 11) {
-                      Navigator.of(context).pushNamed('/KulluGK');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: ((context) => SirmourGK())),
+                      );
                     }
                   }),
               DividerLine(),
@@ -103,22 +151,21 @@ class SubCategoryTiles extends StatelessWidget {
 
   final Widget titleText;
 
-  final Function onTapHandler;
+  final VoidCallback onTapHandler;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        leading: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Icon(
-            Icons.group,
-            color: Colors.deepOrange,
-          ),
+      leading: CircleAvatar(
+        backgroundColor: Colors.white,
+        child: Icon(
+          Icons.group,
+          color: Colors.deepOrange,
         ),
-        title: titleText,
-        trailing: Icon(Icons.arrow_right),
-        onTap: () {
-          onTapHandler;
-        });
+      ),
+      title: titleText,
+      trailing: Icon(Icons.arrow_right),
+      onTap: onTapHandler,
+    );
   }
 }

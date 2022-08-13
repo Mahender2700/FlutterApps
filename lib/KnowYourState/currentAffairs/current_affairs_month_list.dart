@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:himachal_gk/KnowYourState/currentAffairs/current_affairs_text.dart';
 
-import '../../mcq/mcq_screen.dart';
-
 class CurrentAffairsMonth extends StatelessWidget {
-  final List<String> selectGKyear = [
+  final List<String> selectGKMonth = [
     'January',
     'February',
     'March',
@@ -26,17 +24,17 @@ class CurrentAffairsMonth extends StatelessWidget {
         title: Text('Current Affairs'),
       ),
       body: ListView.builder(
-        itemCount: selectGKyear.length,
+        itemCount: selectGKMonth.length,
         itemBuilder: (context, index) {
           return Column(
             children: [
               ListTile(
-                title: Text(selectGKyear[index]),
+                title: Text(selectGKMonth[index]),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const CurrentAffairText()),
+                      builder: ((context) => CurrentAffairsText()),
                     ),
                   );
                 },
