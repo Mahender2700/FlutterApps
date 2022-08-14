@@ -7,7 +7,7 @@ import 'KnowYourState/facts_gk_screen.dart';
 import 'KnowYourState/history/history_screen.dart';
 import 'OneLinerQuestion/Category_Wise/category_wise_screen.dart';
 import 'OneLinerQuestion/district_wise_screen.dart';
-import 'OneLinerQuestion/mixed_gk.dart';
+import 'OneLinerQuestion/MixedGK/mixed_gk.dart';
 import 'OneLinerQuestion/subCategory_screen.dart';
 import 'home_screen.dart';
 import 'mcq/result_screen.dart';

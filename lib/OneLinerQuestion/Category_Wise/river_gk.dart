@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:himachal_gk/Model/question_model.dart';
 
-class CurrentAffairsText extends StatelessWidget {
+class RiverGK extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<QuestionCategory> questionCategory = [
@@ -51,7 +51,7 @@ class CurrentAffairsText extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text('Current Affairs January'),
+        title: Text('River GK'),
       ),
       body: ListView.builder(
         itemCount: questionCategory.length,

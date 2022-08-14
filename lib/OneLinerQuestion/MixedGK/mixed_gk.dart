@@ -6,12 +6,12 @@ class MixedGkScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var category = [
-      'नदियां',
-      'श्रेणी',
-      'चोटी',
-      'ग्लेशियर',
-      'घाटी',
-      'दर्रा',
+      'हिमाचल सामान्य ज्ञान 1-20',
+      'हिमाचल सामान्य ज्ञान 21-40',
+      'हिमाचल सामान्य ज्ञान 41-60',
+      'हिमाचल सामान्य ज्ञान 61-80 ',
+      'हिमाचल सामान्य ज्ञान 81-100 ',
+      'हिमाचल सामान्य ज्ञान 101-120',
     ];
     return Scaffold(
       backgroundColor: Colors.grey[200],

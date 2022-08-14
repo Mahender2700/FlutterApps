@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:himachal_gk/OneLinerQuestion/Category_Wise/river_gk.dart';
 
 import '../../style.dart';
 
@@ -34,11 +35,10 @@ class CategoryWiseScreen extends StatelessWidget {
                 ),
                 onTapHandler: () {
                   if (index == 0) {
-                    Navigator.of(context).pushNamed('/Category-Three');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => RiverGK())));
                   }
-                  if (index == 1) {
-                    Navigator.of(context).pushNamed('/Category-Two');
-                  }
+                  if (index == 1) {}
                   // if (index == 2) {
                   //   Navigator.of(context).pushNamed('/Category-Three');
                   // }
@@ -47,22 +47,7 @@ class CategoryWiseScreen extends StatelessWidget {
                   // }
                 },
               ),
-
               Divider(),
-              // SubCategoryTiles(
-              //   titleText: Text(category[1]),
-              //   onTapHandler: () {
-              //     Navigator.of(context).pushNamed('/Category-Two');
-              //   },
-              // ),
-              // DividerLine(),
-              // SubCategoryTiles(
-              //   titleText: Text(category[2]),
-              //   onTapHandler: () {
-              //     Navigator.of(context).pushNamed('/Category-Three');
-              //   },
-              // ),
-              // DividerLine(),
             ],
           );
         },
@@ -79,22 +64,21 @@ class SubCategoryTiles extends StatelessWidget {
 
   final Widget titleText;
 
-  final Function onTapHandler;
+  final VoidCallback onTapHandler;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        leading: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Icon(
-            Icons.group,
-            color: Colors.deepOrange,
-          ),
+      leading: CircleAvatar(
+        backgroundColor: Colors.white,
+        child: Icon(
+          Icons.group,
+          color: Colors.deepOrange,
         ),
-        title: titleText,
-        trailing: Icon(Icons.arrow_right),
-        onTap: () {
-          onTapHandler;
-        });
+      ),
+      title: titleText,
+      trailing: Icon(Icons.arrow_right),
+      onTap: onTapHandler,
+    );
   }
 }
