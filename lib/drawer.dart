@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:url_launcher/url_launcher.dart';
 // import 'package:launch_review/launch_review.dart';
-// import './style.dart';
+import './style.dart';
 // import 'package:share/share.dart';
 // import 'package:smooth_star_rating/smooth_star_rating.dart';
-import 'dart:ui';
-// import 'dart:ui' show lerpDouble;
 
 class MainDrawer extends StatelessWidget {
   @override
