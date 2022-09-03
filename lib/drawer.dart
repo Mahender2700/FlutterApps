@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
-// import 'package:launch_review/launch_review.dart';
-import './style.dart';
-// import 'package:share/share.dart';
-// import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:async';
+import 'package:launch_review/launch_review.dart';
+
+final Uri _url = Uri.parse(
+    'https://play.google.com/store/apps/developer?id=GK+In+Hindi+Offline');
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
+  }
+}
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -40,35 +48,34 @@ class MainDrawer extends StatelessWidget {
             trailing: Icon(
               Icons.arrow_right,
             ),
-            onTap: () {
-              // Share.share(
-              //   'check out this Awesome App https://play.google.com/store/apps/details?id=educationalapps.sscpreviousyearsgk',
-              //   // subject: 'Sharing on Email'
-              // );
+            onTap: () async {
+              await Share.share(
+                  "check out this Awesome App https://play.google.com/store/apps/developer?id=GK+In+Hindi+Offline",
+                  subject: 'Sharing on WhatsApp');
             },
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.star_border,
               color: Colors.deepOrange,
             ),
-            title: Text(
+            title: const Text(
               'Rate This App',
               // style: categoryTextStyle,
             ),
             trailing: Icon(Icons.arrow_right),
             onTap: () {
-              // LaunchReview.launch(
-              //   //import 'package:launch_review/launch_review.dart';
-              //   //Add dependencies launch_review: ^2.0.0
-              //   //Paste your AndroidAppId below
-              //   androidAppId: "com.iyaffle.kural",
-              //   //Paste your iOSAppId below
-              //   // iOSAppId: "585027354",
-              // );
+              LaunchReview.launch(
+                //import 'package:launch_review/launch_review.dart';
+                //Add dependencies launch_review: ^2.0.0
+                //Paste your AndroidAppId below
+                androidAppId: "com.iyaffle.kural",
+                //Paste your iOSAppId below
+                // iOSAppId: "585027354",
+              );
             },
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               Icons.list,
               color: Colors.deepOrange,
@@ -78,16 +85,7 @@ class MainDrawer extends StatelessWidget {
               // style: categoryTextStyle,
             ),
             trailing: Icon(Icons.arrow_right),
-            onTap: () async {
-              // const url =
-              //     'https://play.google.com/store/apps/developer?id=Educational+Apps+In+Hindi';
-
-              // if (await canLaunch(url)) {
-              //   await launch(url, forceSafariVC: false);
-              // } else {
-              //   throw 'Could not launch $url';
-              // }
-            },
+            onTap: _launchUrl,
           ),
         ],
       ),
