@@ -4,15 +4,18 @@ import 'OneLinerQuestion/subCategory_screen.dart';
 import 'drawer.dart';
 import 'extracted_widgets/extracted_widgets.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 240, 240, 240),
       appBar: AppBar(
-        //  backgroundColor: Colors.deepOrange,
         title: Text('Himachal GK'),
       ),
       drawer: MainDrawer(),
@@ -24,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       'Know Your State',
                       style: TextStyle(
@@ -60,13 +63,13 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 // One Liner Questions
 
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       'One Liner Questions',
                       style: TextStyle(

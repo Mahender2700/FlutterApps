@@ -7,11 +7,11 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Result'),
+        title: const Text('Your Result'),
       ),
       body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Text(
               'Your Result',
               style: TextStyle(
@@ -19,7 +19,7 @@ class ResultScreen extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
+          const Expanded(
             child: Text(
               'You Scored',
               style: TextStyle(
@@ -27,7 +27,7 @@ class ResultScreen extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
+          const Expanded(
             child: Text(
               '5/10',
               style: TextStyle(
@@ -40,9 +40,10 @@ class ResultScreen extends StatelessWidget {
               children: [
                 Expanded(
                     child: TextButton(
-                        child: Text('Retake Test'), onPressed: () {})),
+                        child: const Text('Retake Test'), onPressed: () {})),
                 Expanded(
-                    child: TextButton(child: Text('Share'), onPressed: () {})),
+                    child: TextButton(
+                        child: const Text('Share'), onPressed: () {})),
               ],
             ),
           )

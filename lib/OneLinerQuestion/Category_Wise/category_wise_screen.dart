@@ -4,7 +4,6 @@ import 'package:himachal_gk/OneLinerQuestion/Category_Wise/river_gk.dart';
 import '../../style.dart';
 
 class CategoryWiseScreen extends StatelessWidget {
-//  static const routeName = '/sub-category-screen';
   @override
   Widget build(BuildContext context) {
     var category = [
@@ -35,8 +34,12 @@ class CategoryWiseScreen extends StatelessWidget {
                 ),
                 onTapHandler: () {
                   if (index == 0) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) => RiverGK())));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => RiverGK()),
+                      ),
+                    );
                   }
                   if (index == 1) {}
                   // if (index == 2) {
