@@ -48,6 +48,10 @@ class CurrentAffairsText extends StatelessWidget {
       QuestionCategory(
           question: 'सूरजताल व चंद्रताल क्या है?',
           correctAnswer: 'प्राकृतिक झीलें'),
+      QuestionCategory(
+          question:
+              'सूरजताल व चंद्रताल क्या है? सूरजताल व चंद्रताल क्या है?सूरजताल व चंद्रताल क्या है?सूरजताल व चंद्रताल क्या है?',
+          correctAnswer: 'प्राकृतिक झीलें'),
     ];
     return Scaffold(
       appBar: AppBar(
@@ -59,18 +63,20 @@ class CurrentAffairsText extends StatelessWidget {
           return ListTile(
             title: Text(
               'Q.${index + 1} ${questionCategory[index].question}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 // color: Colors.black,
               ),
             ),
             subtitle: Text(
               'Ans: ${questionCategory[index].correctAnswer}',
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
               ),
             ),
+            trailing: Icon(Icons.favorite_border),
           );
+          Divider();
         },
       ),
     );

@@ -17,7 +17,7 @@ class CategoryWiseScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text("Category Wise GK"),
+        title: const Text("Category Wise GK"),
       ),
       body: ListView.builder(
         itemCount: category.length,

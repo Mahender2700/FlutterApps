@@ -33,8 +33,8 @@ class Quiz extends StatelessWidget {
                   ),
                   width: double.infinity,
                   padding: EdgeInsets.all(30),
-                  child: Text(
-                    'Q.1. This is the Question, you should write here',
+                  child: const Text(
+                    "Which Programming language is used by Flutter?",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -45,7 +45,7 @@ class Quiz extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
+                    children: const [
                       Text(
                         'HP TET 2022',
                         style: TextStyle(

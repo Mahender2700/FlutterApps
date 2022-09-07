@@ -15,12 +15,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // onTap: () {
-      //   Navigator.of(context).pushNamed('/CategoryWiseScreen');
-      // },
-
       onTap: onTapHandler,
-
       child: Card(
         shadowColor: Colors.black,
         child: Container(
